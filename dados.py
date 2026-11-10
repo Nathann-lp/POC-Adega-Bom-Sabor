@@ -69,3 +69,4 @@ def carregar(conteudo: bytes):
         raise ValueError(
             f"Falha ao ler o Excel ({type(exc).__name__}): {exc}"
         ) from exc
+    return validar(tabelas)
