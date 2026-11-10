@@ -1,0 +1,7 @@
+Validação em 14/10/2026
+10 testes unittest aprovados.
+AppTest: carga inicial, filtros, simulação, upload válido e inválido.
+Servidor Streamlit: HTTP 200 no endpoint de saúde.
+Cenário-base: 4 urgentes, 15 preventivos, 142 suspensões, 146 unidades, R$ 8.184,28.
+Conferência visual em navegador real não realizada.
+Python 3.12.14; Streamlit 1.66.0; pandas 2.2.3; openpyxl 3.1.5
