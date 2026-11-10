@@ -66,5 +66,6 @@ def carregar(conteudo: bytes):
         arquivo = pd.ExcelFile(BytesIO(conteudo), engine='openpyxl')
         tabelas = {n: pd.read_excel(arquivo, sheet_name=n) for n in CAMPOS if n in arquivo.sheet_names}
     except Exception as exc:
-        raise ValueError('Não foi possível ler o Excel. Envie um .xlsx válido e sem senha.') from exc
-    return validar(tabelas)
+        raise ValueError(
+            f"Falha ao ler o Excel ({type(exc).__name__}): {exc}"
+        ) from exc
